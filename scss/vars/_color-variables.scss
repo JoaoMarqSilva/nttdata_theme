@@ -1,0 +1,71 @@
+// Example of colors using root.
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --color-1: #e6e6e6;
+  --color-2: #ebf0f5;
+  --color-3: #ced7e0;
+}
+
+// Dark mode color changes.
+body.darkmode {
+  --color-1: #090f14;
+  --color-2: #25323d;
+  --color-3: #25323d;
+}
+
+//Neutral
+$black: var(--black);
+$white: var(--white);
+$color_1: var(--color-1);
+$color_2: var(--color-2);
+$color_3: var(--color-3);
+
+//Theme Variable
+//Blues
+$midnight-blue: #070e27;
+$midnight-blue-light: #091232;
+$navy-blue: #1f3ba7;
+$light-blue: #79a0db;
+$cornflower-blue: #cfd8fc;
+
+
+//Change this values
+
+
+//Brand Colours
+$brand_1: #5C5D5E;
+$brand_2: #E6E9EB;
+$brand_3: #121313;
+
+//Colour Palette
+//Typography Colours
+$heading: #002938;
+$body: #33444A;
+
+//Background Colours
+$background-light: #F2F4F5;
+$background: #E6E9EB;
+$background-dark: #B8BABC;
+
+//Border Colours
+$border-light: #ACAFB0;
+$border: #5C5D5E;
+$border-dark: #171718;
+
+//Interaction Colours
+$interaction-text: #E6E9EB;
+$interaction-background: #00698F;
+$interaction-hover-text: #5C5D5E;
+$interaction-hover-background: #003F56;
+$interaction-focus: #8B5CD7;
+
+//Highlight Colour
+$highlight: #5C5D5E;
+
+//Status Colours
+$information: #007CBF;
+$warning:#C95100;
+$error: #CE3836;
+$success: #CE3836;
+

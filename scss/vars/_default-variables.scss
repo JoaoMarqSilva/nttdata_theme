@@ -1,0 +1,387 @@
+// Font Variables
+$main_font: 'Noto Sans', sans-serif;
+$icon_font: 'icon';
+
+// Font-weight
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+
+// Breakpoints
+$sm: 480px;
+$md: 767px;
+$md2: 900px;
+$lg: 990px;
+$xl: 1200px;
+$xl2: 1360px;
+$xl3: 1600px;
+
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-28: 28px;
+$font-size-34: 34px;
+$font-size-36: 36px;
+
+$breakpoints: (
+  sm: $sm,
+  md: $md,
+  md2: $md2,
+  lg: $lg,
+  xl: $xl,
+  xl2: $xl2,
+  xl3: $xl3,
+) !default;
+
+// Media Queries
+$phone: 'only screen and (max-width : #{$sm})';
+$phablet: 'only screen and (max-width : #{$md})';
+$tablet: 'only screen and (max-width : #{$lg})';
+$medium-laptop: 'only screen and (max-width : #{$xl})';
+
+/// Mixin to manage responsive breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+/// Mixin to manage responsive breakpoints
+@mixin respond-to-min($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+// Transition Mixing
+@mixin transition($variable) {
+  -webkit-transition: $variable;
+  -moz-transition: $variable;
+  -ms-transition: $variable;
+  -o-transition: $variable;
+  transition: $variable;
+}
+
+// Transform Mixing
+@mixin transform($variable) {
+  -webkit-transform: $variable;
+  -moz-transform: $variable;
+  -ms-transform: $variable;
+  -o-transform: $variable;
+  transform: $variable;
+}
+
+// Translate Mixing
+@mixin translate($v1, $v2) {
+  -webkit-transform: translate($v1, $v2);
+  -moz-transform: translate($v1, $v2);
+  -ms-transform: translate($v1, $v2);
+  -o-transform: translate($v1, $v2);
+  transform: translate($v1, $v2);
+}
+
+// Shadow Mixing
+@mixin shadow($variable) {
+  -webkit-box-shadow: $variable;
+  -moz-box-shadow: $variable;
+  -ms-box-shadow: $variable;
+  -o-box-shadow: $variable;
+  box-shadow: $variable;
+}
+
+@mixin doble-shadow($v1, $v2) {
+  -webkit-box-shadow: $v1, $v2;
+  -moz-box-shadow: $v1, $v2;
+  -ms-box-shadow: $v1, $v2;
+  -o-box-shadow: $v1, $v2;
+  box-shadow: $v1, $v2;
+}
+
+@mixin text-shadow($variable) {
+  -webkit-text-shadow: $variable;
+  -moz-text-shadow: $variable;
+  -ms-text-shadow: $variable;
+  -o-text-shadow: $variable;
+  text-shadow: $variable;
+}
+
+// Animation Mixing
+@mixin animation($variable) {
+  -webkit-animation: $variable;
+  -moz-animation: $variable;
+  -ms-animation: $variable;
+  -o-animation: $variable;
+  animation: $variable;
+}
+
+// Filter Mixing
+@mixin filter($variable) {
+  -webkit-filter: $variable;
+  -moz-filter: $variable;
+  -ms-filter: $variable;
+  -o-filter: $variable;
+  filter: $variable;
+}
+
+// Disable highligh
+@mixin nohighligh {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Display Flex Mixing
+@mixin flexdisplay {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+// Flex Mixing
+@mixin flex($variable) {
+  -webkit-flex: $variable;
+  -moz-flex: $variable;
+  -ms-flex: $variable;
+  -o-flex: $variable;
+  flex: $variable;
+}
+
+// Flex Order Mixing
+@mixin order($variable) {
+  -webkit-box-ordinal-group: $variable;
+  -moz-box-ordinal-group: $variable;
+  -ms-flex-order: $variable;
+  -webkit-order: $variable;
+  order: $variable;
+}
+
+// Align Items Mixing
+@mixin alignitems($variable) {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+// Flex Direction Mixing
+@mixin flexdirection($variable) {
+  -webkit-flex-direction: $variable;
+  -moz-flex-direction: $variable;
+  -ms-flex-direction: $variable;
+  -o-flex-direction: $variable;
+  flex-direction: $variable;
+}
+
+// Filter
+@mixin filter($variable) {
+  -webkit-filter: $variable;
+  -ms-filter: $variable;
+  -moz-filter: $variable;
+  -o-filter: $variable;
+  filter: $variable;
+}
+
+// Scroll bar
+@mixin scroll() {
+  &::-ms-clear {
+    display: none;
+  }
+  &::-webkit-scrollbar-track {
+    display: none;
+    position: absolute;
+    background: transparent !important;
+  }
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: transparent repeat-y !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(102, 102, 102, 0.3);
+    opacity: 0.6;
+    border-radius: 4px;
+  }
+}
+
+// Stop selection
+@mixin selection() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+//Buttons variables.
+
+@mixin button-bg-black($bg, $color) {
+  background: $bg;
+  color: $color;
+  &:hover {
+    background: darken($bg, 8%);
+    color: $color;
+    transition: all 0.3s ease;
+  }
+  &:active {
+    color: $color;
+    background: darken($bg, 32%);
+  }
+  &.button-border {
+    color: $color;
+    background: transparent;
+    border: 1px solid $color;
+    &:hover {
+      background: lighten($color, 70%);
+      transition: all 0.3s ease;
+      color: $bg;
+    }
+  }
+}
+
+@mixin button-bg-white($bg, $color) {
+  background: $bg;
+  color: $color;
+  &:hover {
+    background: lighten($bg, 8%);
+    color: $color;
+    transition: all 0.3s ease;
+  }
+  &:active {
+    color: $color;
+    background: lighten($bg, 32%);
+  }
+  &.button-border {
+    color: $color;
+    background: transparent;
+    border: 1px solid $color;
+    &:hover {
+      background: darken($color, 8%);
+      transition: all 0.3s ease;
+      color: $bg;
+    }
+  }
+}
+
+@mixin button-geral {
+  text-decoration: none;
+  padding: 13px 24px;
+  border-radius: 25px;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $main_font;
+  font-weight: $bold;
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+//Icons variables.
+
+@mixin font-icon-geral($code, $color) {
+  color: $color;
+  &:after {
+    position: absolute;
+    color: $color;
+    content: $code;
+    font-family: $icons;
+    font-size: 40px;
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 10px;
+    top: 50%;
+    right: 0;
+    @include translate(0, -50%);
+  }
+}
+
+@mixin font-icon-center($code, $color, $size) {
+  &:after {
+    position: absolute;
+    color: $color;
+    content: $code;
+    font-family: $icons;
+    font-size: $size;
+    width: $size;
+    vertical-align: middle;
+    top: 50%;
+    left: 50%;
+    @include translate(-50%, -50%);
+  }
+}
+
+@mixin font-icon-right($code, $color, $size) {
+  &:after {
+    position: absolute;
+    color: $color;
+    content: $code;
+    font-family: $icons;
+    font-size: $size;
+    width: $size;
+    vertical-align: middle;
+    top: 50%;
+    right: 0;
+    @include translate(0, -50%);
+  }
+}
+
+@mixin font-icon-left($code, $color, $size) {
+  &:after {
+    position: absolute;
+    color: $color;
+    content: $code;
+    font-family: $icons;
+    font-size: $size;
+    width: $size;
+    vertical-align: middle;
+    top: 50%;
+    left: 0;
+    @include translate(0, -50%);
+  }
+}
+
+@mixin font-icon-relative($code, $color, $size) {
+  &:after {
+    position: relative;
+    color: $color;
+    content: $code;
+    font-family: $icons;
+    font-size: $size;
+    width: $size;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,69 @@
+/*
+    Here you can change the style of the footer, with the blocks, class and variables
+*/
+
+/* Styling for the site footer */
+.site-footer {
+	background-color: $midnight-blue;
+	/* Sets the background color using the variable from color-variables file */
+	border-top: 2px solid $navy-blue;
+	/* Sets a border at the top */
+	padding: 3rem 0 4rem;
+	/* Adds padding to the top, bottom and left side of the footer */
+	display: block;
+	/* Displays the footer as a block element */
+	font-size: 18px;
+	/* Sets the font size */
+
+	.sitebranding-logo {
+		a {
+			padding: 0 0 0 8px;
+			height: 100%;
+			width: 132px;
+		}
+	}
+
+	.container-footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 20px 0;
+		@include respond-to("md") {
+			display: block;
+		}
+	}
+
+	.footer-top {
+		.container {
+		//	border-bottom: 1px solid $heading;
+		}
+	}
+
+	.footer-middle {
+		.container {
+			//border-bottom: 1px solid $heading;
+		}
+
+		ul {
+			padding: 0;
+
+			li {
+				list-style: none;
+
+				// Navbar link item.
+				a.nav-link {
+					padding: 5px 0;
+					color: var(--white);
+					/* change text color */
+					font-weight: 700;
+					text-decoration: none;
+
+					// Link item on hover.
+					&:hover {
+						color: $cornflower-blue;
+						/* change text hover color */
+					}
+				}
+			}
+		}
+	}
+}

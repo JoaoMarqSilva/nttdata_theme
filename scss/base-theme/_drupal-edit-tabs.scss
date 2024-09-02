@@ -1,0 +1,126 @@
+$main_color: #6485c1;
+$secondary_color: #070e27;
+
+// Drupal Content Tabs
+nav.tabs {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  z-index: 110;
+  transform: translate(-50%, 0px);
+  margin-bottom: 0px;
+  ul {
+    border: none;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+    li {
+      pointer-events: all;
+      float: none;
+      display: inline-block;
+      margin: 10px 5px 0;
+      border: none;
+      @media only screen and (max-width: 800px) {
+        display: none;
+      }
+      a {
+        text-decoration: none;
+        background-color: $main_color;
+        color: $white;
+        border-radius: 30px;
+        padding: 10px 30px 10px 25px;
+        font-weight: 700;
+        border: 0.1px solid $main_color;
+        @include text-shadow(0 2px 0 rgba(0, 0, 0, 0.2));
+        @include transition(all 0.3s);
+        @include shadow(0 1px 3px 0 rgba(0, 0, 0, 0.6));
+        @include transition(0.3s all);
+        &:hover {
+          background-color: $secondary_color;
+          color: $white;
+          border: 0.1px solid;
+          @include shadow(0 1px 5px 0 rgba(0, 0, 0, 0.6));
+        }
+      }
+      &.is-active {
+        a {
+          text-decoration: none;
+          cursor: default;
+          background-color: $white;
+          color: $main_color;
+          border: none;
+          @include shadow(0 1px 3px 0 rgba(0, 0, 0, 0.6));
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  nav.tabs {
+    left: auto;
+    right: 10px;
+    width: auto;
+    ul {
+      position: relative;
+      border: none;
+      background-color: $main_color;
+      color: $white;
+      border-radius: 20px;
+      @include transition(all 0.5s);
+      @include shadow(0 1px 3px 0 rgba(0, 0, 0, 0.6));
+      li {
+        pointer-events: none;
+        display: none;
+        width: 100%;
+      }
+      &:hover {
+        margin-left: 10px;
+        padding-bottom: 40px;
+        @include transition(all 0.5s);
+        li {
+          pointer-events: unset;
+          display: block;
+          &:last-child {
+            margin-bottom: 20px;
+          }
+        }
+        &:after {
+          position: absolute;
+          bottom: 10px;
+        }
+        nav.tabs & {
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.messages--status {
+  position: fixed;
+  bottom: 80px;
+  z-index: 100;
+  left: 50%;
+  width: 60%;
+  text-align: center;
+  @include translate(-50%, 0);
+  .alert {
+    position: relative;
+    padding: 0.75rem 1.25rem 1rem;
+    cursor: pointer;
+  }
+}
+
+.close:focus,
+.close:hover {
+  color: $black;
+  text-decoration: none;
+  opacity: 0.75;
+  border: none;
+  outline: none;
+}

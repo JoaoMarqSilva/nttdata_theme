@@ -1,0 +1,5 @@
+// Default variables
+@import 'vars/color-variables', 'vars/default-variables';
+
+// Base-theme.
+@import 'base-theme/drupal-edit-tabs', 'base-theme/general-theme', 'base-theme/footer', 'base-theme/header', 'base-theme/pager';

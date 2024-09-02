@@ -1,0 +1,172 @@
+*{
+  box-sizing: border-box;
+}
+
+
+html {
+  overflow-x: hidden;
+  body {
+    overflow: hidden;
+    font-family: $main_font;
+    @include scroll();
+    margin: 0;
+    background-color: $white; // Here you can change the page background color.
+    // Here you can change menus and sections based if user is logged-in.
+    &.user-logged-in {
+      .header {
+        .container {
+          .region-header-top-2 {
+            @include respond-to("md") {
+              top: 134px;
+            }
+          }
+        }
+      }
+    }
+    .skip-link {
+      position: absolute;
+      top: 0;
+      font-size: 0;
+      height: 0;
+      width: 0;
+      overflow: hidden;
+    }
+    //Here you can change the container.
+    .container {
+      max-width: 1320px;
+      padding: 0.75rem;
+      margin: 0 auto;
+      @include respond-to("xl2") {
+        max-width: 1320px;
+      }
+      @include respond-to("xl") {
+        max-width: 1140px;
+      }
+      @include respond-to("lg") {
+        max-width: 960px;
+      }
+      @include respond-to("md2") {
+        max-width: 720px;
+      }
+      @include respond-to("md") {
+        max-width: 540px;
+      }
+      @include respond-to("sm") {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+
+
+//Here you can change the main element styles.
+.layout-main-wrapper {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $main_font;
+    font-weight: $bold;
+    letter-spacing: normal;
+    color: $midnight-blue; // Here you can change all colors.
+  }
+  h1 {
+    font-size: 56px;
+    @include respond-to("md") {
+      font-size: 40px;
+    }
+  }
+  h2 {
+    font-size: 44px;
+    @include respond-to("md") {
+      font-size: 34px;
+    }
+  }
+  h3 {
+    font-size: 36px;
+    @include respond-to("md") {
+      font-size: 30px;
+    }
+  }
+  h4 {
+    font-size: 28px;
+  }
+  h5 {
+    font-size: 24px;
+  }
+  h6 {
+    font-size: 20px;
+  }
+  
+  //Here you can style the texts, links and buttons.
+  
+  a,
+  p {
+    font-family: $main_font;
+    letter-spacing: normal;
+    color: $midnight-blue;
+    font-size: 1rem;
+    line-height: 28px;
+    letter-spacing: 0;
+  }
+}
+
+
+a,
+input,
+select,
+button {
+  display: inline-block;
+  vertical-align: top;
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+//Here you can style the lists.
+ul {
+  color: $midnight-blue;
+  li {
+    list-style-type: circle; // Here you can change the format of bullets from lists.
+  }
+}
+ol {
+  color: $midnight-blue;
+  counter-reset: item;
+  list-style-type: none;
+  li:before {
+    content: counter(item, decimal) ') ';
+    counter-increment: item;
+  }
+}
+
+// Here tou can change the format of a blockquote.
+blockquote {
+  position: relative;
+  /* background: #ddd; */
+  &:before {
+    position: absolute;
+    content: open-quote;
+    font-size: 4em;
+    margin-left: -0.6em;
+    margin-top: -0.4em;
+  }
+  &:after {
+    position: absolute;
+    content: close-quote;
+    font-size: 4em;
+    bottom: 0;
+    right: 0;
+    margin-right: -0.6em;
+    margin-bottom: -0.8em;
+  }
+  p {
+    display: inline;
+  }
+}

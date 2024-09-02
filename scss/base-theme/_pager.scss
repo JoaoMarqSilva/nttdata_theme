@@ -1,0 +1,208 @@
+.pager {
+  position: relative;
+  padding: 72px 0;
+  @include respond-to("md2") {
+    padding: 66px 0;
+  }
+  ul {
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    .container-item,
+    .container-next,
+    .container-previous {
+      display: flex;
+      position: absolute;
+    }
+    .container-next {
+      right: 0;
+      @include respond-to("md") {
+        right: 2px;
+      }
+    }
+    .container-previous {
+      left: 0;
+      @include respond-to("md") {
+        left: 2px;
+      }
+    }
+    .page-item {
+      padding: 0.375rem 8px;
+      @include respond-to("md") {
+        padding: 0.375rem 5px;
+      }
+      span {
+        display: none;
+      }
+      a {
+        font-family: $main_font;
+        font-size: 18px;
+        line-height: 20px;
+        color: $midnight-blue;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        @include respond-to("md") {
+          font-size: 16px;
+        }
+        &:active,
+        &:focus,
+        &:hover,
+        &:focus-visible {
+          outline: none;
+          color: $navy-blue;
+          border-bottom: 1px solid $navy-blue;
+          border-radius: 0;
+          box-shadow: none;
+        }
+      }
+      &.active {
+        span{
+          display: block;
+          font-family: $main_font;
+          font-size: 18px;
+          line-height: 20px;
+          color: $navy-blue;
+          background: transparent;
+          border-radius: 0;
+          border-top: none;
+          border-left: none;
+          border-right: none;
+          border-bottom: 1px solid $navy-blue;
+          padding: 0;
+          @include respond-to("md") {
+            right: 2px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    .pager__item {
+      &--next,
+      &--previous {
+        a {
+          padding: 13px 56px 13px 24px;
+          border: 2px solid $navy-blue;
+
+          @include respond-to("md2") {
+            font-size: 0;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            &:after {
+              margin-right: -2px;
+              font-size: 35px;
+              width: 37px;
+            }
+          }
+        }
+      }
+      &--previous {
+        margin-left: 16px;
+        @include respond-to("md") {
+          margin-left: 10px;
+        }
+        a{
+          padding: 13px 24px 13px 56px;
+          &:after,
+          &:before {
+            left: 0;
+            transform: rotate(180deg);
+            top: auto;
+          }
+          @include respond-to("md2") {
+            font-size: 0;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            &:after {
+              margin-left: -3px;
+              font-size: 35px;
+              width: 37px;
+              top: 6px;
+            }
+          }
+        }
+      }
+      &--first-page {
+        a{
+          border: 2px solid $navy-blue;
+          padding: 13px 24px 13px 56px;
+          background-color: transparent;
+          &:before {
+            position: absolute;
+            //Here you can change the icon you want for pager arrows.
+            // content: '\e90c';
+            // font-family: $icons;
+            font-size: 40px;
+            width: 40px;
+            vertical-align: middle;
+            margin-left: 10px;
+            @include respond-to("md2") {
+              margin-left: -8px;
+              font-size: 35px;
+              width: 37px;
+            }
+          }
+          &:after,
+          &:before {
+            left: 0;
+            transform: rotate(180deg);
+            top: auto;
+          }
+          @include respond-to("md2") {
+            font-size: 0;
+            width: 40px;
+            height: 40px;
+            padding: 6px;
+            &:after {
+              margin-left: 2px;
+              font-size: 35px;
+              width: 37px;
+            }
+          }
+        }
+      }
+      &--last-item {
+        margin-left: 16px;
+        @include respond-to("md") {
+          margin-left: 10px;
+        }
+        a{
+          border: 2px solid $navy-blue;
+          padding: 13px 56px 13px 24px;
+          background: transparent;
+            &:before {
+            position: absolute;
+            //Here you can change the icon you want for pager arrows.
+            // content: '\e90c';
+            // font-family: $icons;
+            font-size: 40px;
+            width: 40px;
+            vertical-align: middle;
+            top: 50%;
+            right: 0;
+            @include translate(0, -50%);
+            @include respond-to("md2") {
+              margin-right: -8px;
+              font-size: 35px;
+              width: 37px;
+            }
+          }
+          @include respond-to("md2") {
+            font-size: 0;
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            &:after {
+              margin-right: 1px;
+              font-size: 35px;
+              width: 37px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

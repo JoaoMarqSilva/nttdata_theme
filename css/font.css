@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,400;0,700;0,800;1,400;1,700&display=swap');
+
+@font-face {
+  font-family: 'icon';
+  font-style: normal;
+  font-weight: normal;
+  src: local('icon'), url('../assets/fonts/icon-fonts/icon.woff') format('woff'), url('../assets/fonts/icon-fonts/icon.eot') format('eot'),
+    url('../assets/fonts/icon-fonts/icon.ttf') format('ttf'), url('../assets/fonts/icon-fonts/icon.svg') format('svg');
+}

@@ -1,0 +1,213 @@
+/*
+/* Style of the header.
+*/
+
+@import '../vars/default-variables'; 
+
+.header {
+  background-color: $midnight-blue;
+  color: var(--white);
+  display: block;
+  &.menu-open {
+    .region-header-top-2 {
+      display: block;
+    }
+  }
+  .region-header-top-1, .region-header-top-2, .region-header-top-3 {
+    a, span {
+      color: var(--white);
+      font-size: 1rem;
+      line-height: 20px;
+      font-weight: 600;
+      display: block;
+      padding: 1rem;
+      text-align: left;
+      text-decoration: none;
+      padding-right: 45px;
+      padding-left: 5px;
+      &.nav-link {
+        &:hover {
+          color: $cornflower-blue; /* change text hover color */
+          &:after {
+            color: $cornflower-blue;
+          }
+        }
+      }  
+    }
+  }
+  .container {
+    @include respond-to("md") {
+      align-items: center;
+      justify-content: space-between;
+      display: flex;
+      padding: 30px 10px;
+    }
+    .header-container-menus {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      .header-container-links {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+
+    .region-header-top-1 {
+      display: block;
+      .sitebranding-logo {
+        a {
+          padding: 0 0 0 8px;
+          height: 100%;
+          width: 132px;
+        }
+      }
+    }
+    .region-header-top-2 {
+      display: block;
+      @include respond-to("md") {
+        display: none;
+        position: absolute;
+        background-color: $midnight-blue;
+        top: 95px;
+        z-index: 1;
+        width: 100%;
+        left: 0;
+      }
+      .nav {
+        display: flex;
+        @include respond-to("md") {
+          display: block;
+          padding: 0 15px;
+        }
+        li {
+          list-style: none;
+          &.menu-item--expanded {
+            &.show {
+              position: relative;
+              > a, span {
+                &:after {
+                  transform: rotate(180deg);
+                }
+              }
+            }
+            > a, span {
+              position: relative;
+              &:hover {
+                cursor: pointer;
+              }
+              &:after {
+                font-weight: $medium;
+                content: "\e90c";
+                font-family: $icon_font;
+                font-size: 30px;
+                position: absolute;
+                top: 17px;
+                color: var(--white);
+                transition: transform 0.7s ease;
+                right: 15px;
+              }
+            }
+            .menu-background-expanded {
+              display: none;
+              position: absolute;
+              background-color: $midnight-blue;
+              margin: 0px 0px 0px -15px;
+              top: 80px;
+              z-index: 100;
+              ul {
+                display: block;
+                padding: 0 15px;
+              }
+              @include respond-to("md") {
+                display: none;
+                position: relative;
+                margin: 0;
+                top: 0;
+                ul {
+                  padding: 0 10px;
+                  a, span {
+                    color: $cornflower-blue;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .block-nttdata-theme-useraccountmenu {
+    position: relative;
+    @include respond-to("md") {
+      padding: 0 15px;
+    }
+    &:before {
+      display: inline-block;
+      content: "\e900";
+      font-family: $icon_font;
+      font-size: 25px;
+      position: relative;
+      right: 0;
+      top: 0;
+      color: var(--white);
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    ul.nav {
+      display: none;
+      position: absolute;
+      background-color: $midnight-blue;
+      margin: 0px 0px 0px -15px;
+      top: 68px;
+      z-index: 100;
+      padding: 0 15px;
+      right: -20px;
+      @include respond-to("md") {
+        top: 60px;
+      }
+      li {
+        list-style: none;
+        a {
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+}
+
+
+// //Hamburguer mobile
+.menu-toggle {
+  display: none;
+  &:before {
+    content: "\e902";
+    font-family: $icon_font;
+    font-size: 30px;
+    position: relative;
+    right: 0;
+    top: 0;
+    color: var(--white);
+  }
+  // Icon when mobile is opened.
+  &:hover {
+    cursor: pointer;
+  }
+  @include respond-to("md") {
+    display: block;
+  }
+  &.menu-close {
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      content: "\e907";
+      font-family: $icon_font;
+      font-size: 30px;
+      color: var(--white);
+    }
+  }
+}
