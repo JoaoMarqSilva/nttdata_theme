@@ -1,0 +1,96 @@
+{#
+/**
+* @file
+* NTTData's theme implementation to display a single page.
+*
+* @see template_preprocess_page()
+* @see html.html.twig
+*/
+#}
+<div id="page-wrapper">
+  <div id="page">
+    <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
+      {% block header %}
+      {% if page.header_top_1 or page.header_top_2 or page.header_top_3 %}
+        <div class="header-top">
+          <div class="container">
+            <div class="header-container-menus">
+              {{ page.header_top_1 }}
+              <div class="header-container-links">
+                {{ page.header_top_2 }}
+                {{ page.header_top_3}}
+             <nav{{ navbar_top_attributes.removeClass('bg-secondary') }}>
+                <div class="navbar-zone">
+                  <div class="js-mobile-menu mobile-menu menu-toggle"></div>
+                </div>
+             </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+      {% if page.header_bottom_1 %}
+        <div class="header-bottom">
+          <div class="container">
+            {{ page.header_bottom_1 }}
+          </div>
+        </div>
+      {% endif %}
+        {% endblock %}
+    </header>
+    {% if page.highlighted %}
+    <div class="highlighted">
+      <aside class="container section clearfix" role="complementary">
+        {{ page.highlighted }}
+      </aside>
+    </div>
+    {% endif %}
+    <div id="main-wrapper" class="layout-main-wrapper clearfix">
+      {% block content %}
+      <div id="main" class="container">
+        <div class="row row-offcanvas row-offcanvas-left clearfix">
+          <main{{ content_attributes }}>
+            <section class="section">
+              <div id="main-content" tabindex="-1"></div>
+              {{ page.content }}
+            </section>
+            </main>
+        </div>
+      </div>
+      {% endblock %}
+    </div>
+      <footer class="site-footer">
+        <div class="container">
+          <div class="footer-top">
+            {% block footer %}
+              {% if page.footer_top_1 or page.footer_top_2 %}
+                <div class="footer-top">
+                  <div class="container-footer container-top">
+                    {{ page.footer_top_1}}
+                    {{ page.footer_top_2}}
+                  </div>
+                </div>
+              {% endif %}
+              {% if page.footer_middle_1 or page.footer_middle_2 or page.footer_middle_3 or page.footer_middle_4%}
+                <div class="footer-middle">
+                  <div class="container-footer container-middle">
+                  {{ page.footer_middle_1}}
+                  {{ page.footer_middle_2}}
+                  {{ page.footer_middle_3}}
+                  {{ page.footer_middle_4}}
+                  </div>
+                </div>
+              {% endif %}
+              {% if page.footer_bottom_1 or page.footer_bottom_2 %}
+                <div class="footer-bottom">
+                  <div class="container-footer container-bottom">
+                  {{ page.footer_bottom_1}}
+                  {{ page.footer_bottom_2}}
+                  </div>
+                </div>
+              {% endif %}
+            {% endblock %}
+        </div>
+      </footer>
+  </div>
+</div>
