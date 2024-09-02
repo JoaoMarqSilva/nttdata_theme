@@ -1,0 +1,18 @@
+{
+  "name": "drupal/nttdata_theme",
+  "description": "NTTData theme.",
+  "homepage": "https://www.drupal.org/project/nttdata_theme",
+  "support": {
+      "issues": "https://www.drupal.org/project/issues/nttdata_theme"
+  },
+  "type": "drupal-theme",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {
+      "drupal/field_group": "^3.4",
+      "drupal/nomarkup": "^1.0",
+      "drupal/paragraphs": "^1.17",
+      "drupal/sdc_display": "^1.0@beta",
+      "npm-asset/slick-carousel": "^1.8"
+  }
+}

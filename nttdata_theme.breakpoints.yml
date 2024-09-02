@@ -1,0 +1,24 @@
+nttdata_theme.phone:
+  label: Mobile
+  mediaQuery: '(max-width: 767px)'
+  weight: 0
+  multipliers:
+    - 1x
+nttdata_theme.tablet:
+  label: Tablet
+  mediaQuery: '(min-width: 768px) and (max-width: 1024px)'
+  weight: 1
+  multipliers:
+    - 1x
+nttdata_theme.desktop:
+  label: Desktop - small
+  mediaQuery: '(min-width: 1025px) and (max-width: 1250px)'
+  weight: 2
+  multipliers:
+    - 1x
+nttdata_theme.lg-desktop:
+  label: Desktop
+  mediaQuery: '(min-width: 1251px)'
+  weight: 3
+  multipliers:
+    - 1x
