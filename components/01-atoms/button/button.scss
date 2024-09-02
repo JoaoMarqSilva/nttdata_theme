@@ -1,0 +1,126 @@
+@import "../../../scss/vars/color-variables";
+@import "../../../scss/vars/default-variables";
+
+button.button {
+  background: none;
+  border: none;
+  padding: 0;
+  a {
+    font-size: 1rem;
+    line-height: 20px;
+    font-weight: 600;
+    padding: 0.875rem 2.5rem;
+    display: inline-block;
+    text-decoration: none;
+    outline-offset: 0.125rem;
+    outline-width: 0.1875rem;
+    transition: all 0.25s ease;
+    border-radius: 0.25rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline-color: $interaction-focus;
+      outline-style: solid;
+    }
+    &:active {
+      outline-color: $interaction-focus;
+      outline-style: solid;
+    }
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+  &.primary a {
+    background-color: $interaction-background;
+    border-color: $interaction-background;
+    color: $interaction-text;
+    &:hover {
+      background-color: $interaction-hover-background;
+      border-color: $interaction-hover-background;
+    }
+    &:focus {
+      background-color: $interaction-background;
+    }
+    &:active {
+      background-color: $interaction-hover-background;
+      border-color: $interaction-hover-background;
+    }
+    &:disabled {
+      background-color: $interaction-background;
+      border-color: $interaction-background;
+    }
+  }
+  &.secondary a {
+    background-color: transparent;
+    color: $interaction-background;
+    border: 0.125rem solid $interaction-background;
+    &:hover {
+      border-color: $interaction-hover-background;
+      color: $interaction-hover-background;
+    }
+    &:focus {
+      border-color: $interaction-hover-background;
+      color: $interaction-hover-background;
+    }
+    &:active {
+      border-color: $interaction-hover-background;
+      color: $interaction-hover-background;
+    }
+    &:disabled {
+      border-color: $interaction-background;
+    }
+  }
+  &.tertiary a {
+    background-color: transparent;
+    border: 0.125rem solid transparent;
+    color: $interaction-background;
+    &:hover {
+      color: $interaction-hover-background;
+    }
+    &:focus {
+      color: $interaction-hover-background;
+    }
+    &:active {
+      color: $interaction-hover-background;
+    }
+    &:disabled {
+      border-color: $interaction-background;
+    }
+  }
+  &.external a {
+    position: relative;
+    &:after {
+      width: 10px;
+      height: 10px;
+      content: "\e921";
+      font-family: "icon"; 
+      position: absolute;
+      top: 17px;
+      right: 20px;
+    }
+  }
+  &.arrow_right a {
+    &:after {
+      position: absolute;
+      content: "\e921";
+      font-family: "icon";  
+      font-size: 18px;
+      padding-left: 15px;
+      padding-top: 2px
+    }    
+  }
+  &.arrow_left a {
+    position: relative;
+    padding-right: 18px;
+    &:before {      
+      position: absolute;
+      transform: rotate(180deg);
+      content: "\e921";
+      font-family: "icon"; 
+      font-size: 18px;
+      left: 10px;
+      padding-top: 2px;
+    }
+  }
+}

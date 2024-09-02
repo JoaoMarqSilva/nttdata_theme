@@ -1,0 +1,117 @@
+@import '../../../scss/vars/color-variables';
+@import '../../../scss/vars/default-variables';
+
+div.tag  {
+  background: none;
+  border: none;
+  margin-bottom: 2rem;
+  a, .tag-text {
+    font-size: .875rem;
+    line-height: 18px;
+    font-weight: 400;
+    padding: 0.25rem 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .25s ease;
+    border-radius: 0.25rem;
+    border-style: solid;
+    border-width: 0.0625rem;
+    &:hover {
+      cursor: pointer;
+    }
+    &:focus {
+      outline-color: $interaction-focus;
+      outline-style: solid;
+    }
+    &:active {
+      outline-color: $interaction-focus;
+      outline-style: solid;
+    }
+    &:disabled {
+      opacity: 0.4;
+    }
+  }
+  .tag-text {
+    &:hover {
+      cursor: auto;
+    }
+    &:active {
+      outline-color: inherit;
+      outline-style: none;
+    }
+  }
+  &.primary a {
+    background-color: $interaction-background;
+    border-color: $interaction-background;
+    color: $interaction-text;
+    &:hover {
+      background-color: $interaction-hover-background;
+      border-color: $interaction-hover-background;
+    }
+    &:focus {
+      background-color: $interaction-background;
+    }
+    &:active {
+      background-color: $interaction-hover-background;
+      border-color: $interaction-hover-background;
+    }
+    &:disabled {
+      background-color: $interaction-background;
+      border-color: $interaction-background;
+    }
+  }
+  &.primary .tag-text {
+    background-color: $interaction-background;
+    border-color: $interaction-background;
+    color: $interaction-text;
+  }
+  &.secondary a {
+    background-color: transparent;
+    color: $interaction-background;
+    border: 0.125rem solid $interaction-background;
+    &:hover {
+      border-color: $interaction-hover-background;
+      color: $interaction-hover-background;
+    }
+    &:focus {
+      border-color: $interaction-hover-background;
+      color: $interaction-hover-background;
+    }
+    &:active {
+      border-color: $interaction-hover-background;
+      color: $interaction-hover-background;
+    }
+    &:disabled {
+      border-color: $interaction-background;
+    }
+  }
+  &.secondary .tag-text{
+    background-color: transparent;
+    color: $interaction-background;
+    border: 0.125rem solid $interaction-background;
+  }
+  &.tertiary a {
+    background-color: transparent;
+    border: 0.125rem solid transparent;
+    color: $interaction-background;
+    &:hover {
+      color: $interaction-hover-background;
+    }
+    &:focus {
+      color: $interaction-hover-background;
+    }
+    &:active {
+      color: $interaction-hover-background;
+    }
+    &:disabled {
+      border-color: $interaction-background;
+    }
+  }
+  &.tertiary .tag-text {
+    background-color: transparent;
+    border: 0.125rem solid transparent;
+    color: $interaction-background;
+    padding: 0;
+  }
+}
+

@@ -1,0 +1,33 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Campaign
+status: stable
+description: This is the Campaign component.
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Text
+      description: The text for the campaign component
+      examples:
+        - Submit
+    content:
+      type: string
+      title: Content
+    image:
+      title: Media Image
+      description: The image for the component.
+      type: string
+    imagepositon:
+      type: string
+      title: Image Position
+      description: The image position.
+    topics:
+      type: string
+      title: Topics
+    date:
+      type: string
+      title: Date
+    links:
+      type: string
+      title: Links

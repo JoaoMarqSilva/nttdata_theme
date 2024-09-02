@@ -1,0 +1,63 @@
+{#
+/**
+ * @file
+ * Campaign component.
+ *
+ * Variables:
+ * - content_top: [string] Content slot.
+ * - image: [object] Image object:
+ *   - url: [string] Image URL.
+ *   - alt: [string] Image alt text.
+ * - image_position: [string] left / right
+ * - tags: [array] Array of tags.
+ * - title: [string] Title.
+ * - date: [string] Date.
+ * - content: [string] Content.
+ * - links: [array] Links.
+ * - content_bottom: [string] Content slot.
+ * - theme: [string] Theme: light, dark.
+ * - vertical_spacing: [string] With top, bottom or both vertical spaces.
+ * - attributes: [string] Additional attributes.
+ * - modifier_class: [string] Additional classes.
+ */
+#}
+
+
+<div {{ attributes.addClass(['campaign']) }}>
+  <div class="container">
+      <div class="campaign__wrapper {{ imagepositon|striptags|lower }}">
+        {% if image is not empty %}
+          <div class="campaign__image">
+            {{ image }}
+          </div>
+        {% endif %}
+        <div class="campaign__inner-wrapper">
+          <div class="campaign__inner">
+            {% if topics %}
+              <div class="campaign__topics">
+                {{ topics }}
+              </div>
+            {% endif %}
+            {% if text is not empty %}
+              {{ text }}
+            {% endif %}
+            {% if date is not empty %}
+              {{ date }}
+            {% endif %}
+            {% if content is not empty %}
+              <div class="campaign__content">
+                {{ content }}
+              </div>
+            {% endif %}
+            {% if links is not empty %}
+              <div class="campaign__links">
+                {{ links }}
+              </div>
+            {% endif %}
+        </div>
+      </div>
+  </div>
+</div>
+
+
+

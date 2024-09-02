@@ -1,0 +1,50 @@
+@import '../../../scss/vars/default-variables';
+@import '../../../scss/vars/color-variables';
+
+
+.main-next_step{
+  width: 100%;
+  border: 1px solid $interaction-text;
+  border-left: 5px solid $midnight-blue;
+  border-radius: 5px;
+  padding: 20px 35px 20px 20px; 
+  text-wrap: wrap;
+  position: relative;
+  &:hover {
+    cursor: pointer;
+    background: $color_2;
+  }
+  a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    text-decoration: none;
+    z-index: 10;
+    background-color: $white;
+    opacity: 0;
+    filter: alpha(opacity=0);
+  }
+  .field--name-field-title {
+    color: $midnight-blue;
+    font-size: 20px;
+    font-weight: 600;
+  } 
+  .field--name-field-title {
+    &:after {
+      font-weight: 500;
+      content:"\e922";
+      font-family: "icon";
+      font-size: 30px;
+      position: absolute;
+      right: 15px;
+      top: 21%;
+      color: $light-blue;
+      transition: transform 0.7s ease;
+    }
+
+  }
+}
+
+

@@ -1,0 +1,40 @@
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --color-1: #e6e6e6;
+  --color-2: #ebf0f5;
+  --color-3: #ced7e0;
+}
+
+body.darkmode {
+  --color-1: #090f14;
+  --color-2: #25323d;
+  --color-3: #25323d;
+}
+
+.heading h2,
+.heading h3,
+.heading h4,
+.heading h5,
+.heading h6 {
+  letter-spacing: normal;
+  margin: 0;
+}
+.heading h1 {
+  font-size: 56px;
+}
+.heading h2 {
+  font-size: 48px;
+}
+.heading h3 {
+  font-size: 39px;
+}
+.heading h4 {
+  font-size: 32px;
+}
+.heading h5 {
+  font-size: 25px;
+}
+.heading h6 {
+  font-size: 20px;
+}

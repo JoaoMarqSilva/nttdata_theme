@@ -1,0 +1,52 @@
+@charset "UTF-8";
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --color-1: #e6e6e6;
+  --color-2: #ebf0f5;
+  --color-3: #ced7e0;
+}
+
+body.darkmode {
+  --color-1: #090f14;
+  --color-2: #25323d;
+  --color-3: #25323d;
+}
+
+.paragraph--type--nttdata-theme-accordion {
+  margin-bottom: 10px;
+}
+.paragraph--type--nttdata-theme-accordion .field--name-field-title,
+.paragraph--type--nttdata-theme-accordion .container-description {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #E6E9EB;
+}
+.paragraph--type--nttdata-theme-accordion .field--name-field-title {
+  padding: 20px 35px 20px 20px;
+  border-left: 3px solid #070e27;
+  color: #070e27;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+.paragraph--type--nttdata-theme-accordion .field--name-field-title.open:after {
+  transform: rotate(180deg);
+}
+.paragraph--type--nttdata-theme-accordion .field--name-field-title:hover {
+  cursor: pointer;
+}
+.paragraph--type--nttdata-theme-accordion .field--name-field-title:after {
+  font-weight: 500;
+  content: "";
+  font-family: "icon";
+  font-size: 30px;
+  position: absolute;
+  right: 15px;
+  top: 17px;
+  color: #79a0db;
+  transition: transform 0.7s ease;
+}
+.paragraph--type--nttdata-theme-accordion .container-description {
+  border-top: none;
+}

@@ -1,0 +1,22 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Heading
+status: stable
+description: This is the Heading component.
+props:
+  type: object
+  properties:
+    text:
+      type: string
+      title: Text
+      description: The text for the Heading
+      examples:
+        - This is the text for the Heading.
+    headingType:
+      type: string
+      title: Heading Type
+      enum:
+        - h2
+        - h3
+        - h4
+        - h5
+        - h6

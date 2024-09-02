@@ -1,0 +1,49 @@
+@import '../../../scss/vars/default-variables';
+@import '../../../scss/vars/color-variables';
+
+
+.paragraph--type--nttdata-theme-accordion {
+	margin-bottom: 10px;
+	.field--name-field-title,
+	.container-description {
+		width: 100%;
+		padding: 20px;
+		border: 1px solid $interaction-text;
+	}
+
+	.field--name-field-title {
+		padding: 20px 35px 20px 20px;
+		border-left: 3px solid $midnight-blue;
+		color: $midnight-blue;
+		font-size: 16px;
+		font-weight: $semi-bold;
+		position: relative;
+		&.open {
+			&:after {
+				transform: rotate(180deg);
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+		}
+
+		&:after {
+			font-weight: $medium;
+			content: "\e90c";
+			font-family: $icon_font;
+			font-size: 30px;
+			position: absolute;
+			right: 15px;
+			top: 17px;
+			color: $light-blue;
+			transition: transform 0.7s ease;
+		}
+
+	}
+
+	.container-description {
+		border-top: none;
+	}
+}
+

@@ -1,0 +1,12 @@
+{% if iconType %}
+  <button {{ attributes.addClass(['button', buttonType|default('primary'), iconType]) }}>
+      {{ text }}
+  </button>
+{% else %}
+  <button {{ attributes.addClass(['button', buttonType|default('primary')]) }}>
+      {{ text }}
+  </button>
+{% endif %}
+
+    {# {{ source(componentMetadata.path ~ '/img/' ~ buttonType|default('Primary') ~ '.svg') }} #}
+

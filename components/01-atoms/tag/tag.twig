@@ -1,0 +1,7 @@
+<div {{ attributes.addClass(['tag', tagType|default('primary')]) }}>
+  {% if text['#url'] %}
+    {{ text }}
+  {% else %}
+    <div class="tag-text">{{ text }}</div>
+  {% endif %}
+</div>

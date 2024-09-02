@@ -1,0 +1,15 @@
+{# <div {{ attributes.addClass(['heading']) }}>
+  {% if text %}
+    {{ text }}
+  {% endif %}
+</div> #}
+
+{% set level = headingType|default('h2') %}
+{% if text %}
+  {# <h{{ level }} class="ct-heading {{ modifier_class }}" {% if attributes is not empty %}{{ attributes|raw }}{% endif %}> #}
+  <div {{ attributes.addClass(['heading', 'container']) }}>
+    <{{ level }}>
+      {{ text }}
+    </{{ level }}>
+  </div>
+{% endif %}
