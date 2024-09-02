@@ -1,0 +1,34 @@
+uuid: e736915a-a3e3-4011-9069-faffa20c4dec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nttdata_theme_accordion_item.field_nttdata_theme_description
+    - field.field.paragraph.nttdata_theme_accordion_item.field_nttdata_theme_title
+    - paragraphs.paragraphs_type.nttdata_theme_accordion_item
+  module:
+    - text
+id: paragraph.nttdata_theme_accordion_item.default
+targetEntityType: paragraph
+bundle: nttdata_theme_accordion_item
+mode: default
+content:
+  field_nttdata_theme_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_nttdata_theme_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

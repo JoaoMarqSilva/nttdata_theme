@@ -1,0 +1,38 @@
+uuid: 4f473a56-424a-4730-9436-4359b119d1f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_n_t_image
+    - media.type.nttdata_theme_image
+  module:
+    - image
+id: media.nttdata_theme_image.field_n_t_image
+field_name: field_n_t_image
+entity_type: media
+bundle: nttdata_theme_image
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

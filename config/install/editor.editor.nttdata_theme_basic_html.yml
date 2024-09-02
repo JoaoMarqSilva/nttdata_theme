@@ -1,0 +1,40 @@
+uuid: 46aa169d-23f5-47f3-adfb-2b8abd6442e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.nttdata_theme_basic_html
+  module:
+    - ckeditor5
+format: nttdata_theme_basic_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - bold
+      - italic
+      - underline
+      - strikethrough
+      - '|'
+      - link
+      - '|'
+      - bulletedList
+      - numberedList
+      - indent
+      - outdent
+      - '|'
+      - insertTable
+      - blockQuote
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+image_upload: {  }

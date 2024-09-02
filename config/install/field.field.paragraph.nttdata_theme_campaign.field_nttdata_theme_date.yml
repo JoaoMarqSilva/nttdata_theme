@@ -1,0 +1,21 @@
+uuid: 47304e4a-5c48-444d-8879-6902a97c8454
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_date
+    - paragraphs.paragraphs_type.nttdata_theme_campaign
+  module:
+    - datetime
+id: paragraph.nttdata_theme_campaign.field_nttdata_theme_date
+field_name: field_nttdata_theme_date
+entity_type: paragraph
+bundle: nttdata_theme_campaign
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

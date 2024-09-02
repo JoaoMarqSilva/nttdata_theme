@@ -1,0 +1,19 @@
+uuid: d69ba2c0-13ce-43f2-b0c6-af329ded0f34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_title
+    - paragraphs.paragraphs_type.nttdata_theme_accordion
+id: paragraph.nttdata_theme_accordion.field_nttdata_theme_title
+field_name: field_nttdata_theme_title
+entity_type: paragraph
+bundle: nttdata_theme_accordion
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: 0965c608-7ef0-4517-9df2-26da1cf33a42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_topics
+    - paragraphs.paragraphs_type.nttdata_theme_campaign
+    - taxonomy.vocabulary.nttdata_theme_topics
+id: paragraph.nttdata_theme_campaign.field_nttdata_theme_topics
+field_name: field_nttdata_theme_topics
+entity_type: paragraph
+bundle: nttdata_theme_campaign
+label: Topics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      nttdata_theme_topics: nttdata_theme_topics
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

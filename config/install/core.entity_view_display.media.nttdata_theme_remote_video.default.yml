@@ -1,0 +1,31 @@
+uuid: 7ff3edb2-3dc0-4452-a0ed-df3355ac9502
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.nttdata_theme_remote_video.field_n_t_oembed_video
+    - media.type.nttdata_theme_remote_video
+  module:
+    - media
+id: media.nttdata_theme_remote_video.default
+targetEntityType: media
+bundle: nttdata_theme_remote_video
+mode: default
+content:
+  field_n_t_oembed_video:
+    type: oembed
+    label: visually_hidden
+    settings:
+      max_width: 0
+      max_height: 0
+      loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

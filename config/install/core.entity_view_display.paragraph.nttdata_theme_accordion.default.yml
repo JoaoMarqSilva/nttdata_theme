@@ -1,0 +1,59 @@
+uuid: 94f1abf7-999d-4f65-be26-d605542cd031
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nttdata_theme_accordion.field_nttdata_theme_accord_items
+    - field.field.paragraph.nttdata_theme_accordion.field_nttdata_theme_title
+    - paragraphs.paragraphs_type.nttdata_theme_accordion
+  module:
+    - entity_reference_revisions
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: false
+    component:
+      machine_name: ''
+    mappings:
+      static:
+        props: {  }
+        slots: {  }
+      dynamic:
+        props: {  }
+        slots: {  }
+id: paragraph.nttdata_theme_accordion.default
+targetEntityType: paragraph
+bundle: nttdata_theme_accordion
+mode: default
+content:
+  field_nttdata_theme_accord_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nttdata_theme_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'nttdata_theme:heading'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              text: ''
+              headingType: h5
+          dynamic:
+            mapped: text
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

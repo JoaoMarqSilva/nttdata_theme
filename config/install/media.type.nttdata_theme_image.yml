@@ -1,0 +1,13 @@
+uuid: 8ce40587-8ee6-4c96-8be3-7de1e27d2e8a
+langcode: en
+status: true
+dependencies: {  }
+id: nttdata_theme_image
+label: Image
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_n_t_image
+field_map: {  }

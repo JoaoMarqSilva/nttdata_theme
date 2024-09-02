@@ -1,0 +1,10 @@
+uuid: 2133726a-c7e3-44f5-9609-aa81198cfbc4
+langcode: en
+status: true
+dependencies: {  }
+id: nttdata_theme_campaign
+label: Campaign
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

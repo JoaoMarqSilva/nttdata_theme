@@ -1,0 +1,20 @@
+uuid: 5085e687-aca8-4cc5-b110-630277a41e1c
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_nttdata_theme_campaign_img
+field_name: field_nttdata_theme_campaign_img
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

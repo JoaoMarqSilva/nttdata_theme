@@ -1,0 +1,60 @@
+uuid: 3b8f6448-7aec-49cb-85ac-fcc01388a328
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.nttdata_theme_video.field_n_t_video_file
+    - media.type.nttdata_theme_video
+  module:
+    - file
+    - path
+id: media.nttdata_theme_video.default
+targetEntityType: media
+bundle: nttdata_theme_video
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_n_t_video_file:
+    type: file_generic
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 100
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

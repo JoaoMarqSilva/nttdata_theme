@@ -1,0 +1,20 @@
+uuid: dfadedd3-b602-4760-9bf0-605fb0297b36
+langcode: en
+status: true
+dependencies:
+  theme:
+    - nttdata_theme
+_core:
+  default_config_hash: 6r3EyO1Ba-YCuNkOnfk-urcAp87NtmCi4PdYMx9s0zk
+id: nttdata_theme_pagetitle
+theme: nttdata_theme
+region: content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

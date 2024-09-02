@@ -1,0 +1,8 @@
+uuid: f6975171-9113-4c05-87d2-a802b6521d98
+langcode: en
+status: true
+dependencies: {  }
+id: nttdata-theme-footer-region-1
+label: 'Footer region 1'
+description: ''
+locked: false

@@ -1,0 +1,74 @@
+uuid: c565cbd0-30cd-4a67-b601-c94b8a942aad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nttdata_theme_accordion_item.field_nttdata_theme_description
+    - field.field.paragraph.nttdata_theme_accordion_item.field_nttdata_theme_title
+    - paragraphs.paragraphs_type.nttdata_theme_accordion_item
+  module:
+    - nomarkup
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'nttdata_theme:accordion'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          description: ''
+      dynamic:
+        props:
+          title: field_nttdata_theme_title
+          description: field_nttdata_theme_description
+id: paragraph.nttdata_theme_accordion_item.default
+targetEntityType: paragraph
+bundle: nttdata_theme_accordion_item
+mode: default
+content:
+  field_nttdata_theme_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 1
+    region: content
+  field_nttdata_theme_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        component:
+          machine_name: 'nttdata_theme:heading'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              text: ''
+              headingType: h4
+          dynamic:
+            mapped: text
+        enabled: 0
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

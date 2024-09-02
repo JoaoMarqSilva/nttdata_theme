@@ -1,0 +1,23 @@
+uuid: b228aba1-1539-4bdd-b0b9-d627b707319c
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_link
+    - paragraphs.paragraphs_type.nttdata_theme_next_step
+  module:
+    - link
+id: paragraph.nttdata_theme_next_step.field_nttdata_theme_link
+field_name: field_nttdata_theme_link
+entity_type: paragraph
+bundle: nttdata_theme_next_step
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

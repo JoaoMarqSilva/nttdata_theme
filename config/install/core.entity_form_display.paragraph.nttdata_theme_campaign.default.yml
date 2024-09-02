@@ -1,0 +1,78 @@
+uuid: 210e748f-abc1-4ce9-9dca-f3c42d1724c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_campaign_img
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_content
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_date
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_img_position
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_link
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_title
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_topics
+    - paragraphs.paragraphs_type.nttdata_theme_campaign
+  module:
+    - datetime
+    - link
+    - media_library
+id: paragraph.nttdata_theme_campaign.default
+targetEntityType: paragraph
+bundle: nttdata_theme_campaign
+mode: default
+content:
+  field_nttdata_theme_campaign_img:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_nttdata_theme_content:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_nttdata_theme_date:
+    type: datetime_default
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nttdata_theme_img_position:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nttdata_theme_link:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_nttdata_theme_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nttdata_theme_topics:
+    type: entity_reference_autocomplete_tags
+    weight: 1
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,8 @@
+uuid: 80e9c036-c1d3-4a52-951a-276fdd4a83e4
+langcode: en
+status: true
+dependencies: {  }
+id: nttdata-theme-footer-region-3
+label: 'Footer region 3'
+description: ''
+locked: false

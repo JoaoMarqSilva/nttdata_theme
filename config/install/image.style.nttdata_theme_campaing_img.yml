@@ -1,0 +1,15 @@
+uuid: 1eb30046-b4f6-47f4-997f-3753db5ddbff
+langcode: en
+status: true
+dependencies: {  }
+name: nttdata_theme_campaing_img
+label: Campaing(560x520)
+effects:
+  864dac4f-6867-4329-a3c6-04777870801c:
+    uuid: 864dac4f-6867-4329-a3c6-04777870801c
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 560
+      height: 520
+      anchor: center-center

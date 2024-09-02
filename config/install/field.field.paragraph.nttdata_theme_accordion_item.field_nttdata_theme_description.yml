@@ -1,0 +1,24 @@
+uuid: 97a99e5e-eba9-4016-bf6a-745eb359b74d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_description
+    - filter.format.nttdata_theme_basic_html
+    - paragraphs.paragraphs_type.nttdata_theme_accordion_item
+  module:
+    - text
+id: paragraph.nttdata_theme_accordion_item.field_nttdata_theme_description
+field_name: field_nttdata_theme_description
+entity_type: paragraph
+bundle: nttdata_theme_accordion_item
+label: Description
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - nttdata_theme_basic_html
+field_type: text_long

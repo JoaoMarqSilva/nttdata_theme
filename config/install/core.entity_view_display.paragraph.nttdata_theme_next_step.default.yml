@@ -1,0 +1,87 @@
+uuid: 9cb61c7c-6cbb-423c-be83-06b702f7e3f4
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nttdata_theme_next_step.field_nttdata_theme_description
+    - field.field.paragraph.nttdata_theme_next_step.field_nttdata_theme_link
+    - field.field.paragraph.nttdata_theme_next_step.field_nttdata_theme_title
+    - paragraphs.paragraphs_type.nttdata_theme_next_step
+  module:
+    - link
+    - sdc_display
+    - text
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'nttdata_theme:next_step'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          title: ''
+          description: ''
+          link: ''
+      dynamic:
+        props:
+          title: field_nttdata_theme_title
+          description: field_nttdata_theme_description
+          link: field_nttdata_theme_link
+id: paragraph.nttdata_theme_next_step.default
+targetEntityType: paragraph
+bundle: nttdata_theme_next_step
+mode: default
+content:
+  field_nttdata_theme_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nttdata_theme_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: true
+      url_plain: true
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      sdc_display:
+        component:
+          machine_name: 'nttdata_theme:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              text: Link
+              buttonType: primary
+          dynamic:
+            mapped: text
+        enabled: 0
+    weight: 6
+    region: content
+  field_nttdata_theme_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      sdc_display:
+        component:
+          machine_name: 'nttdata_theme:heading'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              text: ''
+              headingType: h5
+          dynamic:
+            mapped: text
+        enabled: 0
+    weight: 0
+    region: content
+hidden: {  }

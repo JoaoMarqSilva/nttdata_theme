@@ -1,0 +1,23 @@
+uuid: 4c5b9eb2-4780-4866-ac8c-6242228fb4e2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - nttdata_theme
+id: nttdata_theme_sitebranding
+theme: nttdata_theme
+region: header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

@@ -1,0 +1,44 @@
+uuid: 5b05c26e-9bfe-48d2-b43d-f7bc81412121
+langcode: en-gb
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nttdata_theme_next_step.field_nttdata_theme_description
+    - field.field.paragraph.nttdata_theme_next_step.field_nttdata_theme_link
+    - field.field.paragraph.nttdata_theme_next_step.field_nttdata_theme_title
+    - paragraphs.paragraphs_type.nttdata_theme_next_step
+  module:
+    - link
+    - text
+id: paragraph.nttdata_theme_next_step.default
+targetEntityType: paragraph
+bundle: nttdata_theme_next_step
+mode: default
+content:
+  field_nttdata_theme_description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_nttdata_theme_link:
+    type: link_default
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_nttdata_theme_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

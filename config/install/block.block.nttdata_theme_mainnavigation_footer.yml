@@ -1,0 +1,25 @@
+uuid: 74e451b8-1ef2-477e-a14d-51bf55b6178a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - nttdata_theme
+id: nttdata_theme_mainnavigation_footer
+theme: nttdata_theme
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

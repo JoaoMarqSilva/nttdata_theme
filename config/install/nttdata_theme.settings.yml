@@ -1,0 +1,5 @@
+features:
+  favicon: true
+  logo: true
+  name: true
+  slogan: true

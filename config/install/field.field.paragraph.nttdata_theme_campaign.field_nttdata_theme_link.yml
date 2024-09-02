@@ -1,0 +1,25 @@
+uuid: a0b98974-2e6e-4f04-84b5-1f83541d65f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_link
+    - paragraphs.paragraphs_type.nttdata_theme_campaign
+  module:
+    - link
+_core:
+  default_config_hash: DXfQCKURhiFS_K-9Q_8JUVg0rbk0p8w6Ii_J_fLsxKo
+id: paragraph.nttdata_theme_campaign.field_nttdata_theme_link
+field_name: field_nttdata_theme_link
+entity_type: paragraph
+bundle: nttdata_theme_campaign
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

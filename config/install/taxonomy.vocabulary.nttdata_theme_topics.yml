@@ -1,0 +1,8 @@
+uuid: 0e07f879-ac51-4fab-9da3-484ec963d9d7
+langcode: en
+status: true
+dependencies: {  }
+name: Topics
+vid: nttdata_theme_topics
+description: ''
+weight: 0

@@ -1,0 +1,197 @@
+uuid: 784eff6a-5e30-49c8-87e0-885553fb552b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_campaign_img
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_content
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_date
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_img_position
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_link
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_title
+    - field.field.paragraph.nttdata_theme_campaign.field_nttdata_theme_topics
+    - image.style.nttdata_theme_campaing_img
+    - paragraphs.paragraphs_type.nttdata_theme_campaign
+  module:
+    - datetime
+    - link
+    - media
+    - nomarkup
+    - options
+    - sdc_display
+third_party_settings:
+  sdc_display:
+    enabled: true
+    component:
+      machine_name: 'nttdata_theme:campaign'
+      show_deprecated: null
+    mappings:
+      static:
+        props:
+          text: ''
+          content: ''
+          image: ''
+          imagepositon: ''
+          topics: ''
+          date: ''
+          links: ''
+      dynamic:
+        props:
+          text: field_nttdata_theme_title
+          content: field_nttdata_theme_content
+          image: field_nttdata_theme_campaign_img
+          imagepositon: field_nttdata_theme_img_position
+          topics: field_nttdata_theme_topics
+          date: field_nttdata_theme_date
+          links: field_nttdata_theme_link
+id: paragraph.nttdata_theme_campaign.default
+targetEntityType: paragraph
+bundle: nttdata_theme_campaign
+mode: default
+content:
+  field_nttdata_theme_campaign_img:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: nttdata_theme_campaing_img
+      image_loading:
+        attribute: lazy
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 3
+    region: content
+  field_nttdata_theme_content:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: 0
+        component:
+          machine_name: null
+          show_deprecated: 0
+    weight: 5
+    region: content
+  field_nttdata_theme_date:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'nttdata_theme:tag'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              text: ''
+              tagType: tertiary
+          dynamic:
+            mapped: text
+    weight: 4
+    region: content
+  field_nttdata_theme_img_position:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_nttdata_theme_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'nttdata_theme:button'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              text: Link
+              buttonType: primary
+          dynamic:
+            mapped: text
+    weight: 6
+    region: content
+  field_nttdata_theme_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: '|'
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'nttdata_theme:heading'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              text: ''
+              headingType: h2
+          dynamic:
+            mapped: text
+    weight: 0
+    region: content
+  field_nttdata_theme_topics:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      nomarkup:
+        enabled: true
+        separator: ''
+        referenced_entity: ''
+      sdc_display:
+        enabled: '1'
+        component:
+          machine_name: 'nttdata_theme:tag'
+          show_deprecated: 0
+        mappings:
+          static:
+            props:
+              text: ''
+              tagType: primary
+          dynamic:
+            mapped: text
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

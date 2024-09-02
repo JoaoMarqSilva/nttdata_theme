@@ -1,0 +1,33 @@
+uuid: abb73628-d8d3-40ae-a1cc-b71fb9aa2d77
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.nttdata_theme_video.field_n_t_video_file
+    - image.style.medium
+    - media.type.nttdata_theme_video
+  module:
+    - image
+id: media.nttdata_theme_video.media_library
+targetEntityType: media
+bundle: nttdata_theme_video
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_n_t_video_file: true
+  name: true
+  search_api_excerpt: true
+  uid: true

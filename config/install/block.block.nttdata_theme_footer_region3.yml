@@ -1,0 +1,25 @@
+uuid: 46b3e502-cc72-45f6-817f-d38068344f74
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.nttdata-theme-footer-region-3
+  module:
+    - system
+  theme:
+    - nttdata_theme
+id: nttdata_theme_footer_region3
+theme: nttdata_theme
+region: footer_middle_3
+weight: 0
+provider: null
+plugin: 'system_menu_block:nttdata-theme-footer-region-3'
+settings:
+  id: 'system_menu_block:nttdata-theme-footer-region-3'
+  label: 'Footer region 3'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

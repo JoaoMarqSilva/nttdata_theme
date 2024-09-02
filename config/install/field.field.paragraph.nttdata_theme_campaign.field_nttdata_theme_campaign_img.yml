@@ -1,0 +1,29 @@
+uuid: c310c5bf-b8ee-449a-b5ba-e14b020ffb59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_campaign_img
+    - media.type.nttdata_theme_image
+    - paragraphs.paragraphs_type.nttdata_theme_campaign
+id: paragraph.nttdata_theme_campaign.field_nttdata_theme_campaign_img
+field_name: field_nttdata_theme_campaign_img
+entity_type: paragraph
+bundle: nttdata_theme_campaign
+label: 'Campaign image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      nttdata_theme_image: nttdata_theme_image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: nttdata_theme_image
+field_type: entity_reference

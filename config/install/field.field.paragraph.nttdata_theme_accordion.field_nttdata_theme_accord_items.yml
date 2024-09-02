@@ -1,0 +1,37 @@
+uuid: fad17858-3fff-4573-b4d0-4ecfa26c1545
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_accord_items
+    - paragraphs.paragraphs_type.nttdata_theme_accordion
+    - paragraphs.paragraphs_type.nttdata_theme_accordion_item
+  module:
+    - entity_reference_revisions
+id: paragraph.nttdata_theme_accordion.field_nttdata_theme_accord_items
+field_name: field_nttdata_theme_accord_items
+entity_type: paragraph
+bundle: nttdata_theme_accordion
+label: 'Accordion items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      nttdata_theme_accordion_item: nttdata_theme_accordion_item
+    negate: 0
+    target_bundles_drag_drop:
+      nttdata_theme_accordion:
+        weight: 4
+        enabled: false
+      nttdata_theme_accordion_item:
+        weight: 5
+        enabled: true
+      nttdata_theme_campaign:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

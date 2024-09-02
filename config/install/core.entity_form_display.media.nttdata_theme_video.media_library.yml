@@ -1,0 +1,27 @@
+uuid: 204a5a5b-59f1-4af0-907d-2133cc481415
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.nttdata_theme_video.field_n_t_video_file
+    - media.type.nttdata_theme_video
+id: media.nttdata_theme_video.media_library
+targetEntityType: media
+bundle: nttdata_theme_video
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_n_t_video_file: true
+  path: true
+  status: true
+  uid: true

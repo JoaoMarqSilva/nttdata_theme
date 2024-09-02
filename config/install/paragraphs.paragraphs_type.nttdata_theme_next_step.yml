@@ -1,0 +1,10 @@
+uuid: dbc52c05-b836-46a1-b4f4-5eb4b975daff
+langcode: en-gb
+status: true
+dependencies: {  }
+id: nttdata_theme_next_step
+label: 'Next Step'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

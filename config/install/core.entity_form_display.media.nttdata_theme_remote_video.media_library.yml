@@ -1,0 +1,27 @@
+uuid: e4f6a10b-e883-4968-a37e-72df1a22bb7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.media.media_library
+    - field.field.media.nttdata_theme_remote_video.field_n_t_oembed_video
+    - media.type.nttdata_theme_remote_video
+id: media.nttdata_theme_remote_video.media_library
+targetEntityType: media
+bundle: nttdata_theme_remote_video
+mode: media_library
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_n_t_oembed_video: true
+  path: true
+  status: true
+  uid: true

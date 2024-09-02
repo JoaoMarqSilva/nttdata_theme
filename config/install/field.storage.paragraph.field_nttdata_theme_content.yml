@@ -1,0 +1,19 @@
+uuid: 45c9d552-e92d-4dc7-a640-1a058df58e94
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_nttdata_theme_content
+field_name: field_nttdata_theme_content
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

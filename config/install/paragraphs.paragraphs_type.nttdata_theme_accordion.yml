@@ -1,0 +1,10 @@
+uuid: 71566493-b78c-4e37-9036-4753dc29864e
+langcode: en
+status: true
+dependencies: {  }
+id: nttdata_theme_accordion
+label: Accordion
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

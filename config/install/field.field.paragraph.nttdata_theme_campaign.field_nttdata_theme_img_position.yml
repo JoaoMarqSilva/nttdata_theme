@@ -1,0 +1,23 @@
+uuid: 61a02f76-ecf2-433f-9390-95b97bfc50c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nttdata_theme_img_position
+    - paragraphs.paragraphs_type.nttdata_theme_campaign
+  module:
+    - options
+id: paragraph.nttdata_theme_campaign.field_nttdata_theme_img_position
+field_name: field_nttdata_theme_img_position
+entity_type: paragraph
+bundle: nttdata_theme_campaign
+label: 'Image position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: left
+default_value_callback: ''
+settings: {  }
+field_type: list_string

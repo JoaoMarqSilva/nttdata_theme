@@ -1,0 +1,20 @@
+uuid: 5687d43b-6c72-4ed2-b8cc-202cef3f1260
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_nttdata_theme_date
+field_name: field_nttdata_theme_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

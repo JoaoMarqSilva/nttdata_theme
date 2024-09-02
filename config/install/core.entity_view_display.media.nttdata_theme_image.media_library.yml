@@ -1,0 +1,33 @@
+uuid: 0b35964f-657e-49d4-afe8-ba4de24b0e63
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.nttdata_theme_image.field_n_t_image
+    - image.style.medium
+    - media.type.nttdata_theme_image
+  module:
+    - image
+id: media.nttdata_theme_image.media_library
+targetEntityType: media
+bundle: nttdata_theme_image
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_n_t_image: true
+  name: true
+  search_api_excerpt: true
+  uid: true
